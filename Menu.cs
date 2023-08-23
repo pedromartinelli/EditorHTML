@@ -12,8 +12,9 @@ public static class Menu
         WriteMenuOptions();
 
         short option = short.Parse(Console.ReadLine()!);
-        Console.Clear();
-        Console.WriteLine(option);
+
+        HandleMenuOptions(option);
+
     }
 
     public static void DrawScreen()
@@ -54,9 +55,29 @@ public static class Menu
         Console.Write("Opção: ");
     }
 
-    public static void HandleMenuOptions()
+    public static void HandleMenuOptions(short option)
     {
+        switch (option)
+        {
+            case 1: New(); break;
+            case 2: Open(); break;
+            case 0: Console.Clear(); Environment.Exit(0); break;
+            default: Show(); break;
+        }
+    }
 
+    public static void New()
+    {
+        Console.Clear();
+
+        Console.WriteLine("new");
+    }
+
+    public static void Open()
+    {
+        Console.Clear();
+
+        Console.WriteLine("open");
     }
 }
 
