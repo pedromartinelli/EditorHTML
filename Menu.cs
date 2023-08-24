@@ -59,18 +59,11 @@ public static class Menu
     {
         switch (option)
         {
-            case 1: New(); break;
+            case 1: Editor.Show(); break;
             case 2: Open(); break;
             case 0: Console.Clear(); Environment.Exit(0); break;
             default: Show(); break;
         }
-    }
-
-    public static void New()
-    {
-        Console.Clear();
-
-        Console.WriteLine("new");
     }
 
     public static void Open()
