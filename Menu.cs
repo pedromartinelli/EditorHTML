@@ -14,7 +14,6 @@ public static class Menu
         short option = short.Parse(Console.ReadLine()!);
 
         HandleMenuOptions(option);
-
     }
 
     public static void DrawScreen()
